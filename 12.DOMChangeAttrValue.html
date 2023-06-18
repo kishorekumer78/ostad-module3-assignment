@@ -1,0 +1,29 @@
+<!-- 12.DOM Change Attribute Value:
+a. Create a webpage with an image element (<img>) that has an initial source URL.
+b. Implement a JavaScript function that changes the source URL of the image element when a button is clicked. Use a different image URL of your choice. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Click the button to change image</h2>
+    <button onclick="changeImage()">Change Image</button>
+    <br><br>
+    <img id="image" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+        alt="Normal Image" width="100px" height="100px">
+
+
+    <script>
+        function changeImage() {
+            const imgElement = document.getElementById("image");
+            imgElement.setAttribute("src", "https://img.freepik.com/premium-photo/image-colorful-galaxy-sky-generative-ai_791316-9864.jpg")
+        }
+    </script>
+</body>
+
+</html>

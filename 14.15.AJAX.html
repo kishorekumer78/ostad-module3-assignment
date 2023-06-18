@@ -1,0 +1,38 @@
+<!-- 14.AJAX Get Request:
+a. Implement a JavaScript function that sends an AJAX GET request to the following URL: "https://api.example.com/data".
+15.AJAX Post Request:
+a. Implement a JavaScript function that sends an AJAX POST request to the following URL: "https://api.example.com/submit".
+b. Send a JSON payload with the following data: { "name": "John Doe", "email": "johndoe@example.com" }. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // AJAX GET REQUEST implementing function
+        async function getData() {
+            var res = await axios.get("https://api.example.com/data");
+            if (res.status === 200) {
+                // do some action with the data like showing in cards or table
+            } else console.log("error");
+        }
+        // AJAX POST REQUEST implementing function
+        async function addData() {
+            // data received from form input box
+            var payload = { "name": "John Doe", "email": "johndoe@example.com" }
+            var res = await axios.post("https://api.example.com/submit", payload);
+
+            if (res.status === 200) {
+                // do some action like show success alert or something
+            } else console.log("error");
+        }
+    </script>
+</body>
+
+</html>

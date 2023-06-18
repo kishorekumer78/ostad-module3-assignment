@@ -1,0 +1,48 @@
+<!-- 13.DOM Query Selector:
+a. Create a webpage with multiple paragraphs containing different classes and IDs.
+b. Implement a JavaScript function that selects all paragraphs with a specific class and changes their text color to red. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Click the button to change color</h2>
+    <button onclick="changeColor()">Change Color</button>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore, porro saepe magnam quis
+        reiciendisab.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore, porro saepe magnam quis
+        reiciendis
+        ab</p>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore, porro saepe magnam quis
+        reiciendis
+        ab</p>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore, porro saepe magnam quis
+        reiciendis
+        ab</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore, porro saepe magnam quis
+        reiciendis
+        ab</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolore, porro saepe magnam quis
+        reiciendis
+        ab</p>
+
+
+
+    <script>
+        function changeColor() {
+            const selectedParas = document.querySelectorAll(".myClass");
+            selectedParas.forEach(el => {
+                el.style.color = "red";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
