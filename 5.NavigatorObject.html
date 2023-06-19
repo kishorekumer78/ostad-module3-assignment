@@ -1,0 +1,58 @@
+<!-- 5.Navigator Object:
+a. Write a JavaScript function that detects the user's browser name and version using the navigator object.
+b. Implement the function to display the user's browser name and version. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Click button to get browser information</h2>
+    <button onclick="showBrowserInfo()">Show</button>
+    <p id="result"></p>
+
+    <script>
+
+        function detectBrowser() {
+            // Get the user agent string from the navigator object
+            const userAgent = window.navigator.userAgent;
+
+            let browserName = "";
+            let browserVersion = "";
+
+            // Detect the browser name and version based on the user agent string
+            if (userAgent.includes('Firefox')) {
+                browserName = 'Mozilla Firefox';
+                // Extract the version number from the user agent string
+                browserVersion = userAgent.match(/Firefox\/(\d+\.\d+)/)[1];
+            } else if (userAgent.includes('Chrome')) {
+                browserName = 'Google Chrome';
+                browserVersion = userAgent.match(/Chrome\/(\d+\.\d+)/)[1];
+            } else if (userAgent.includes('Safari')) {
+                browserName = 'Apple Safari';
+                browserVersion = userAgent.match(/Version\/(\d+\.\d+)/)[1];
+            } else if (userAgent.includes('MSIE') || userAgent.includes('Trident/')) {
+                browserName = 'Internet Explorer';
+                browserVersion = userAgent.match(/(?:MSIE |rv:)(\d+\.\d+)/)[1];
+            } else {
+                browserName = 'Unknown';
+                browserVersion = 'N/A';
+            }
+            return { browserName, browserVersion };
+        }
+
+        function showBrowserInfo() {
+            var res = detectBrowser();
+            document.getElementById("result").innerHTML = `Browser Name:  ${res.browserName}<br>Browser Version :  ${res.browserVersion}`;
+        }
+
+
+    </script>
+</body>
+
+</html>
