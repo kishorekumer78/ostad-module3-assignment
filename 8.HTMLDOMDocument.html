@@ -1,0 +1,24 @@
+<!-- 8.HTML DOM Document:
+a. Create a webpage with a button and a paragraph element.
+b. Implement a JavaScript function that changes the text content of the paragraph element to "Button Clicked!" when the button is clicked. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Click Example</title>
+</head>
+
+<body>
+    <h2>Click the button to change the text</h2>
+    <button onclick="changeText()">Click Me</button>
+    <p id="myParagraph">Text will change here</p>
+
+    <script>
+        function changeText() {
+            var paragraph = document.getElementById("myParagraph");
+            paragraph.innerHTML = "Button Clicked!";
+        }
+    </script>
+</body>
+
+</html>

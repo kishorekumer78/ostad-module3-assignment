@@ -22,35 +22,24 @@ a. Write a JavaScript function that takes a positive integer as input and return
 b. Implement the function to check if a given positive integer is a prime number.
 
 4.Window Object:
-
 a. Create a function that opens a new window with a specified URL and dimensions (width and height).
-
 b. Implement the function to open a new window with the URL "https://www.example.com" and dimensions 800x600.
 
 5.Navigator Object:
-
 a. Write a JavaScript function that detects the user's browser name and version using the navigator object.
-
 b. Implement the function to display the user's browser name and version.
 
 6.Geolocation:
-
 a. Implement a JavaScript function that retrieves the user's current location (latitude and longitude) using the geolocation API.
 
 7.JS Common Events:
-
 Implement a webpage with the following functionality:
-
 a. When the user clicks anywhere on the page, display an alert with the coordinates (x, y) of the click.
-
 b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key.
-
 c. When the user moves the mouse over an image, change the image source to another image of your choice.
 
 8.HTML DOM Document:
-
 a. Create a webpage with a button and a paragraph element.
-
 b. Implement a JavaScript function that changes the text content of the paragraph element to "Button Clicked!" when the button is clicked.
 
 9.JS DOM Working with Form Input:

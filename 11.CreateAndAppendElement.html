@@ -1,0 +1,51 @@
+<!-- 
+11.Create Element & Append Element:
+a. Create a webpage with an empty unordered list ul.
+b. Implement a JavaScript function that dynamically creates five list items (<li>) with sequential numbers (1 to 5) and appends them to the unordered list. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Click the button to populate list</h2>
+    <button onclick="populateList()">POPULATE LIST</button>
+    <button onclick="removeListItems()">EMPTY LIST</button>
+    <button onclick="removeLastItem()">REMOVE ONE ITEM</button>
+    <br><br>
+    <ul id="itemList"></ul>
+    <small id="errorMsg" style="color: red;"></small>
+    <script>
+        var fruits = ["Apple", "Mango", "Banana", "Orange", "Litchi"]
+        function populateList() {
+            document.getElementById("errorMsg").innerHTML = "";
+            var listElement = document.getElementById("itemList");
+            for (let i = 0; i < fruits.length; i++) {
+                var element = document.createElement("li");
+                element.innerHTML = `${i + 1}.  ${fruits[i]}`;
+                element.style.listStyleType = "none";
+                listElement.appendChild(element);
+            }
+        }
+        //EXTRA
+        function removeListItems() {
+            document.getElementById("itemList").innerHTML = "";
+        }
+        //EXTRA
+        function removeLastItem() {
+            var list = document.getElementById("itemList");
+            if (list.children.length >= 1) {
+                list.lastChild.remove();
+            } else {
+                document.getElementById("errorMsg").innerHTML = "List already empty";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

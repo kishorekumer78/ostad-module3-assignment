@@ -1,0 +1,39 @@
+<!-- Implement a webpage with the following functionality:
+a. When the user clicks anywhere on the page, display an alert with the coordinates (x, y) of the click.
+b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key.
+c. When the user moves the mouse over an image, change the image source to another image of your choice. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Page Example</title>
+</head>
+
+<body onclick="handleClick(event)" onkeydown="handleKeyDown(event)" style="min-height:100vh;
+    margin:0;padding:0">
+    <h1>Interactive Page Example</h1>
+    <p>Click anywhere on the page to display the coordinates.</p>
+    <p>Press any key on the keyboard to display the key code.</p>
+
+    <img id="image" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+        alt="Normal Image" width="200px" height="200px" onmouseover="handleMouseOver(this)">
+    <script>
+        function handleClick(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            alert("Clicked at coordinates (x, y): " + x + ", " + y);
+        }
+
+        function handleKeyDown(event) {
+            var keyCode = event.keyCode;
+            alert("Key pressed. Key code: " + keyCode);
+        }
+
+        function handleMouseOver(image) {
+            image.src = "https://img.freepik.com/premium-photo/image-colorful-galaxy-sky-generative-ai_791316-9864.jpg";
+        }
+    </script>
+
+</body>
+
+</html>
